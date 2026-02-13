@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Appointment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body onload="showAppointments()">
+
+  <div class="nav">
+    <div class="brand">
+      <div class="logo">🩺</div>
+      <h2>CarePlus Hospital</h2>
+    </div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="register.html">Register</a>
+      <a href="doctors.html">Doctors</a>
+      <a href="appointment.html">Appointment</a>
+    </div>
+  </div>
+
+  <div class="form-box">
+    <h2>📅 Book Appointment</h2>
+
+    <input id="pname" placeholder="Patient Name" required>
+
+    <select id="doctor">
+      <option>Dr.Ramesh - Cardiology</option>
+      <option>Dr.Sita - Dermatology</option>
+      <option>Dr.Ajay - General</option>
+      <option>Dr.Meena - Gynecology</option>
+    </select>
+
+    <input type="date" id="date" required>
+    <input id="time" placeholder="Time (10AM)" required>
+
+    <button class="btn btn-primary" onclick="bookAppointment()">Book</button>
+
+    <h3 style="margin-top:18px;">📌 Appointment List</h3>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Patient</th>
+          <th>Doctor</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="appList"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
